@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>npm包之dayjs | 雪落山庄</title><meta name="author" content="Nancy"><meta name="copyright" content="Nancy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="dayjs依赖包使用详解记录安装依赖包1npm install dayjs --save  使用依赖包12345&#x2F;&#x2F; 导入依赖包import * as dayjs from &amp;#x27;dayjs&amp;#x27;&#x2F;&#x2F; 获取当前时间const now &#x3D; dayjs()  注意： 如果您的 tsconfig.json 包含以下配置，您必须使用 import dayjs from &#39;dayjs&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm包之dayjs">
+<meta property="og:url" content="https://wqr.github.io/2023/09/06/npm%E5%8C%85%E4%B9%8Bdayjs/index.html">
+<meta property="og:site_name" content="雪落山庄">
+<meta property="og:description" content="dayjs依赖包使用详解记录安装依赖包1npm install dayjs --save  使用依赖包12345&#x2F;&#x2F; 导入依赖包import * as dayjs from &amp;#x27;dayjs&amp;#x27;&#x2F;&#x2F; 获取当前时间const now &#x3D; dayjs()  注意： 如果您的 tsconfig.json 包含以下配置，您必须使用 import dayjs from &#39;dayjs&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wqr.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2023-09-06T04:13:11.000Z">
+<meta property="article:modified_time" content="2023-09-06T09:25:09.398Z">
+<meta property="article:author" content="Nancy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wqr.github.io/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://wqr.github.io/2023/09/06/npm%E5%8C%85%E4%B9%8Bdayjs/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?<script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?a86db41743ce5fb4d7585a35e9407d00";var s = document.getElementsByTagName("script")[0];";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'npm包之dayjs',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-06 17:25:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><nav id="nav"><span id="blog-info"><a href="/" title="雪落山庄"><span class="site-name">雪落山庄</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">npm包之dayjs</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-06T04:13:11.000Z" title="发表于 2023-09-06 12:13:11">2023-09-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-06T09:25:09.398Z" title="更新于 2023-09-06 17:25:09">2023-09-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">980</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="npm包之dayjs"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="dayjs依赖包使用详解记录"><a href="#dayjs依赖包使用详解记录" class="headerlink" title="dayjs依赖包使用详解记录"></a>dayjs依赖包使用详解记录</h2><h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install dayjs --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用依赖包"><a href="#使用依赖包" class="headerlink" title="使用依赖包"></a>使用依赖包</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入依赖包</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> dayjs <span class="keyword">from</span> <span class="string">&#x27;dayjs&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取当前时间</span></span><br><span class="line"><span class="keyword">const</span> now = <span class="title function_">dayjs</span>()</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> 如果您的 <code>tsconfig.json</code> 包含以下配置，您必须使用 <code>import dayjs from &#39;dayjs&#39;</code> 的 default import 模式：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span> <span class="comment">//tsconfig.json</span></span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;esModuleInterop&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;allowSyntheticDefaultImports&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果您没有上述配置，default import 将无法正常工作。 您需要使用 <code>import * as dayjs from &#39;dayjs&#39;</code></p>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">dayjs</span>(<span class="literal">null</span>) 为无效的输入</span><br><span class="line"><span class="comment">// 判断要求格式与输入内容是否匹配</span></span><br><span class="line"><span class="comment">// 都返回一个 Day.js 对象</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">dayjs</span>(<span class="string">&quot;12-25-1995&quot;</span>, <span class="string">&quot;MM-DD-YYYY&quot;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">dayjs</span>(<span class="string">&#x27;2018 三月 15&#x27;</span>, <span class="string">&#x27;YYYY MMMM DD&#x27;</span>, <span class="string">&#x27;zh-cn&#x27;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">dayjs</span>(<span class="string">&#x27;1970-00-00&#x27;</span>, <span class="string">&#x27;YYYY-MM-DD&#x27;</span>).<span class="title function_">isValid</span>()); <span class="comment">// true</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">dayjs</span>(<span class="string">&#x27;1970-00-00&#x27;</span>, <span class="string">&#x27;YYYY-MM-DD&#x27;</span>, <span class="literal">true</span>).<span class="title function_">isValid</span>()); <span class="comment">// false</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">dayjs</span>(<span class="string">&#x27;1970-00-00&#x27;</span>, <span class="string">&#x27;YYYY-MM-DD&#x27;</span>, <span class="string">&#x27;es&#x27;</span>, <span class="literal">true</span>).<span class="title function_">isValid</span>()); <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 传入毫秒数（13位）解析为一个Day.js对象</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">dayjs</span>(<span class="number">1318781876406</span>));</span><br><span class="line"><span class="comment">// 传入秒数（13位）解析为一个Day.js对象</span></span><br><span class="line">dayjs.<span class="title function_">unix</span>(<span class="number">1318781876</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// dayjs()返回的始终是Day.js对象,dayjs().format(format)返回想要的格式</span></span><br><span class="line"><span class="comment">// console.log(dayjs().format(format));</span></span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD HH:mm:ss&#x27;</span>); <span class="comment">// 2018-08-08 12:00:00 这种格式</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>您可以传入包含单位和数值的一个对象来创建 Dayjs 对象。<br>这依赖 <code>ObjectSupport</code> 插件，才能正常运行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dayjs.<span class="title function_">extend</span>(objectSupport)</span><br><span class="line"><span class="title function_">dayjs</span>(&#123; <span class="attr">hour</span>:<span class="number">15</span>, <span class="attr">minute</span>:<span class="number">10</span> &#125;);</span><br><span class="line">dayjs.<span class="title function_">utc</span>(&#123; <span class="attr">y</span>:<span class="number">2010</span>, <span class="attr">M</span>:<span class="number">3</span>, <span class="attr">d</span>:<span class="number">5</span>, <span class="attr">h</span>:<span class="number">15</span>, <span class="attr">m</span>:<span class="number">10</span>, <span class="attr">s</span>:<span class="number">3</span>, <span class="attr">ms</span>: <span class="number">123</span>&#125;);</span><br><span class="line"><span class="title function_">dayjs</span>(&#123; year :<span class="number">2010</span>, month :<span class="number">3</span>, day :<span class="number">5</span>, hour :<span class="number">15</span>, minute :<span class="number">10</span>, second :<span class="number">3</span>, millisecond :<span class="number">123</span>&#125;);</span><br><span class="line"><span class="title function_">dayjs</span>(&#123; <span class="attr">years</span>:<span class="number">2010</span>, <span class="attr">months</span>:<span class="number">3</span>, <span class="attr">date</span>:<span class="number">5</span>, <span class="attr">hours</span>:<span class="number">15</span>, <span class="attr">minutes</span>:<span class="number">10</span>, <span class="attr">seconds</span>:<span class="number">3</span>, <span class="attr">milliseconds</span>:<span class="number">123</span>&#125;); <span class="comment">// 2010-04-05 15:10:03 下午</span></span><br></pre></td></tr></table></figure>
+
+<p>day 和 date 都表示月份里的日期。<br>dayjs({}) 返回当前时间。<br><strong>注意</strong>类似new Date(year, month, date)，月份从 0 开始计算。</p>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p>您可以传入一个数组来创建一个 Dayjs 对象，数组和结构和 new Date() 十分类似。</p>
+<p>这依赖 ArraySupport 插件，才能正常运行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dayjs.<span class="title function_">extend</span>(arraySupport)</span><br><span class="line"><span class="title function_">dayjs</span>([<span class="number">2010</span>, <span class="number">1</span>, <span class="number">14</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">50</span>, <span class="number">125</span>]); <span class="comment">// February 14th, 3:25:50.125 PM</span></span><br><span class="line">dayjs.<span class="title function_">utc</span>([<span class="number">2010</span>, <span class="number">1</span>, <span class="number">14</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">50</span>, <span class="number">125</span>]);</span><br><span class="line"><span class="title function_">dayjs</span>([<span class="number">2010</span>]);        <span class="comment">// January 1st</span></span><br><span class="line"><span class="title function_">dayjs</span>([<span class="number">2010</span>, <span class="number">6</span>]);     <span class="comment">// July 1st</span></span><br><span class="line"><span class="title function_">dayjs</span>([<span class="number">2010</span>, <span class="number">6</span>, <span class="number">10</span>]); <span class="comment">// July 10th</span></span><br><span class="line"><span class="title function_">dayjs</span>(&#123;&#125;)  <span class="comment">// 返回当前时间。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>类似new Date(year, month, date),, 月份从 0 开始计算。</p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><h4 id="isLeapYear"><a href="#isLeapYear" class="headerlink" title="isLeapYear"></a>isLeapYear</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> isLeapYear <span class="keyword">from</span> <span class="string">&#x27;dayjs/plugin/isLeapYear&#x27;</span>; <span class="comment">// 导入插件</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;dayjs/locale/zh-cn&#x27;</span>; <span class="comment">// 导入本地化语言</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="relativeTime"><a href="#relativeTime" class="headerlink" title="relativeTime"></a>relativeTime</h4><p>RelativeTime 增加了 <code>.from</code> <code>.to</code> <code>.fromNow</code> <code>.toNow</code> 4 个 API 来展示相对的时间 (e.g. 3 小时以前).</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入插件</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> relativeTime <span class="keyword">from</span> <span class="string">&#x27;dayjs/plugin/relativeTime&#x27;</span>;</span><br><span class="line">dayjs.<span class="title function_">extend</span>(relativeTime);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用插件</span></span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">from</span>(<span class="title function_">dayjs</span>(<span class="string">&#x27;1990-01-01&#x27;</span>)) <span class="comment">// 31 年后</span></span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">from</span>(<span class="title function_">dayjs</span>(<span class="string">&#x27;1990-01-01&#x27;</span>), <span class="literal">true</span>) <span class="comment">// 31 年</span></span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">fromNow</span>()</span><br><span class="line"></span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">to</span>(<span class="title function_">dayjs</span>(<span class="string">&#x27;1990-01-01&#x27;</span>)) <span class="comment">// 31 年前</span></span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">toNow</span>()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>距离现在的相对时间 .fromNow(withoutSuffix?: boolean)<br>返回 string 距离现在的相对时间</li>
+<li>距离 X 的相对时间 .from(compared: Dayjs, withoutSuffix?: boolean)<br>返回 string 距离 X 的相对时间</li>
+<li>到现在的相对时间 .toNow(withoutSuffix?: boolean)<br>返回 string 到现在的相对时间</li>
+<li>到 X 的相对时间 .to(compared: Dayjs, withoutSuffix?: boolean)<br>返回 string 到 X 的相对时间</li>
+</ul>
+<h4 id="CustomParseFormat"><a href="#CustomParseFormat" class="headerlink" title="CustomParseFormat"></a>CustomParseFormat</h4><p>CustomParseFormat 拓展了 dayjs() 支持自定义时间格式.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入插件</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> customParseFormat <span class="keyword">from</span> <span class="string">&#x27;dayjs/plugin/customParseFormat&#x27;</span>;</span><br><span class="line">dayjs.<span class="title function_">extend</span>(customParseFormat);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="title function_">dayjs</span>(<span class="string">&#x27;05/02/69 1:02:03 PM -05:00&#x27;</span>, <span class="string">&#x27;MM/DD/YY H:mm:ss A Z&#x27;</span>)</span><br><span class="line"><span class="comment">// Returns an instance containing &#x27;1969-05-02T18:02:03.000Z&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">dayjs</span>(<span class="string">&#x27;2018 Enero 15&#x27;</span>, <span class="string">&#x27;YYYY MMMM DD&#x27;</span>, <span class="string">&#x27;es&#x27;</span>)</span><br><span class="line"><span class="comment">// Returns an instance containing &#x27;2018-01-15T00:00:00.000Z&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">dayjs</span>(<span class="string">&#x27;1970-00-00&#x27;</span>, <span class="string">&#x27;YYYY-MM-DD&#x27;</span>, <span class="literal">true</span>) <span class="comment">// strict parsing</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="ObjectSupport"><a href="#ObjectSupport" class="headerlink" title="ObjectSupport"></a>ObjectSupport</h4><p>ObjectSupport 扩展了 <code>dayjs()</code>, <code>dayjs.utc</code>, <code>dayjs().set</code>, <code>dayjs().add</code>, <code>dayjs().subtract</code> API 以支持传入对象参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入插件</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> objectSupport <span class="keyword">from</span> <span class="string">&#x27;dayjs/plugin/objectSupport&#x27;</span>;</span><br><span class="line">dayjs.<span class="title function_">extend</span>(objectSupport);</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="title function_">dayjs</span>(&#123;</span><br><span class="line">  <span class="attr">year</span>: <span class="number">2010</span>,</span><br><span class="line">  <span class="attr">month</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">day</span>: <span class="number">12</span></span><br><span class="line">&#125;);</span><br><span class="line">dayjs.<span class="title function_">utc</span>(&#123;</span><br><span class="line">  <span class="attr">year</span>: <span class="number">2010</span>,</span><br><span class="line">  <span class="attr">month</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">day</span>: <span class="number">12</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">set</span>(&#123; <span class="attr">year</span>: <span class="number">2010</span>, <span class="attr">month</span>: <span class="number">1</span>, <span class="attr">day</span>: <span class="number">12</span> &#125;)</span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">add</span>(&#123; <span class="attr">M</span>: <span class="number">1</span> &#125;)</span><br><span class="line"><span class="title function_">dayjs</span>().<span class="title function_">subtract</span>(&#123; <span class="attr">month</span>: <span class="number">1</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="ArraySupport"><a href="#ArraySupport" class="headerlink" title="ArraySupport"></a>ArraySupport</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> arraySupport <span class="keyword">from</span> <span class="string">&#x27;dayjs/plugin/arraySupport&#x27;</span>;</span><br><span class="line">dayjs.<span class="title function_">extend</span>(arraySupport)</span><br></pre></td></tr></table></figure>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/09/06/npm%E5%8C%85%E4%B9%8Bdate-fns/" title="npm包之date-fns"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">npm包之date-fns</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/05/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8npm%E4%BE%9D%E8%B5%96%E5%8C%85/" title="前端常用npm依赖包"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">前端常用npm依赖包</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Nancy</div><div class="author-info__description">日常学习记录</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wqr-nancy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wqr-nancy" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2269892934@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#dayjs%E4%BE%9D%E8%B5%96%E5%8C%85%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">dayjs依赖包使用详解记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-number">1.1.</span> <span class="toc-text">安装依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-number">1.2.</span> <span class="toc-text">使用依赖包</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.2.1.</span> <span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.2.2.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">1.2.3.</span> <span class="toc-text">数组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">1.3.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#isLeapYear"><span class="toc-number">1.3.1.</span> <span class="toc-text">isLeapYear</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#relativeTime"><span class="toc-number">1.3.2.</span> <span class="toc-text">relativeTime</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CustomParseFormat"><span class="toc-number">1.3.3.</span> <span class="toc-text">CustomParseFormat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ObjectSupport"><span class="toc-number">1.3.4.</span> <span class="toc-text">ObjectSupport</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ArraySupport"><span class="toc-number">1.3.5.</span> <span class="toc-text">ArraySupport</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/07/npm%E5%8C%85%E4%B9%8Baxios/" title="npm包之axios">npm包之axios</a><time datetime="2023-09-07T09:58:38.000Z" title="发表于 2023-09-07 17:58:38">2023-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/06/npm%E5%8C%85%E4%B9%8Bdate-fns/" title="npm包之date-fns">npm包之date-fns</a><time datetime="2023-09-06T09:24:47.000Z" title="发表于 2023-09-06 17:24:47">2023-09-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/06/npm%E5%8C%85%E4%B9%8Bdayjs/" title="npm包之dayjs">npm包之dayjs</a><time datetime="2023-09-06T04:13:11.000Z" title="发表于 2023-09-06 12:13:11">2023-09-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/05/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8npm%E4%BE%9D%E8%B5%96%E5%8C%85/" title="前端常用npm依赖包">前端常用npm依赖包</a><time datetime="2023-09-05T06:59:36.000Z" title="发表于 2023-09-05 14:59:36">2023-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/05/git%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="git报错问题记录">git报错问题记录</a><time datetime="2023-09-05T04:56:26.000Z" title="发表于 2023-09-05 12:56:26">2023-09-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Nancy</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
